@@ -11,7 +11,7 @@ setup(
         description='A utility key for backing up PostgreSQL databases.'
         long_description=long_description,
         long_description_content_type='text/markdown',
-        url='https://github.com/linuxacademy/pgbackup',
+        url='https://github.com/WyNewcomb/pgbackup',
         packages=find_packages('src'),
 )
 
