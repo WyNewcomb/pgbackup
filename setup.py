@@ -6,13 +6,20 @@ with open('README.md', 'r') as f:
 setup(
         name='pgbackup',
         version='0.1.0',
-        author='Wyatt Newcomb'
+        author='Wyatt Newcomb',
         author_email='jwn150@gmail.com',
-        description='A utility key for backing up PostgreSQL databases.'
+        description='A utility key for backing up PostgreSQL databases.',
         long_description=long_description,
         long_description_content_type='text/markdown',
         url='https://github.com/WyNewcomb/pgbackup',
         packages=find_packages('src'),
-)
+        package_dir={'':'src'},
+        install_requires=['boto3'],
+        entry_points={
+            'console_scripts': [
+                'pgbackup=pgbackup.cli:main'
+                ],
+            }
+        )
 
 
